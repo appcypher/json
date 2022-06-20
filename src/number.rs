@@ -768,8 +768,8 @@ impl Number {
     #[cold]
     pub(crate) fn unexpected(&self) -> Unexpected {
         match self.n {
-            N::PosInt(u) => Unexpected::Unsigned(u),
-            N::NegInt(i) => Unexpected::Signed(i),
+            N::PosInt(u) => Unexpected::Unsigned(serde::as_unsigned_int!(u)),
+            N::NegInt(i) => Unexpected::Signed(serde::as_signed_int!(i)),
             N::Float(f) => Unexpected::Float(f),
         }
     }

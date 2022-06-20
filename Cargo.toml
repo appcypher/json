@@ -39,6 +39,9 @@ rustdoc-args = ["--cfg", "docsrs"]
 [package.metadata.playground]
 features = ["raw_value"]
 
+[patch.crates-io]
+serde = { git = "https://github.com/appcypher/serde", branch = "appcypher/content-visitor-i128", features = ["derive"] }
+serde_derive = { git = "https://github.com/appcypher/serde", branch = "appcypher/content-visitor-i128", features = ["derive"] }
 
 ### FEATURES #################################################################
 
